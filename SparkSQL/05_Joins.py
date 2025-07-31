@@ -3,6 +3,23 @@
 
 # COMMAND ----------
 
+emp_df=spark.read.format("csv").option("header","true").option("inferSchema","true").\
+    load("abfss://input@eminentadlsgen2.dfs.core.windows.net/emp.csv")
+
+# COMMAND ----------
+
+dept=[
+    (10, "ACCOUNTING",     "NEW YORK"),
+    (20 ,"RESEARCH",       "DALLAS"),
+    (30, "SALES",          "CHICAGO"),
+    (40, "OPERATIONS",     "BOSTON") 
+]
+
+
+dept_df=spark.createDataFrame(dept, schema="deptno INTEGER, dname STRING,loc STRING")
+
+# COMMAND ----------
+
 emp_df.alias('c').select('c.*').show()
 
 # COMMAND ----------
