@@ -70,3 +70,7 @@ dbutils.notebook.run("/Users/basha.ora11@gmail.com/AzureDatabricksCourse/data",1
 
 # COMMAND ----------
 
+<<<<<<< Updated upstream
+=======
+
+>>>>>>> Stashed changes
