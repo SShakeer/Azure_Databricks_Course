@@ -27,7 +27,7 @@ AS SELECT
 "EV Bike" AS EV_Bike
 
 FROM cloud_files(
-  'abfss://landing@databricksdevstg.dfs.core.windows.net/raw_traffic',
+  'abfss://batch12@databricksdevstg.dfs.core.windows.net/raw_traffic',
   'csv'
 )
 
